@@ -1,12 +1,12 @@
 {
-  "extends": "@tsconfig/node14",
-  "include": ["stacks", "src"],
-  "compilerOptions": {
-    "experimentalDecorators": true,
-    "strictPropertyInitialization": false,
-    "baseUrl": ".", // This must be specified if "paths" is.
-    "paths": {
-      "@entities": ["src/common/entities/index.ts"]
+    "extends": "@tsconfig/node14",
+    "include": ["stacks", "src"],
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "strictPropertyInitialization": false,
+        "baseUrl": ".", // This must be specified if "paths" is.
+        "paths": {
+            "@entities": ["src/common/entities/index.ts"]
+        }
     }
-  }
 }

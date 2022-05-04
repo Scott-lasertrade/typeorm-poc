@@ -1,10 +1,10 @@
-import { MigrationInterface, QueryRunner } from "typeorm";
+import { MigrationInterface, QueryRunner } from 'typeorm';
 
 export class InitialSetup1635981526022 implements MigrationInterface {
-  name = "InitialSetup1635981526022";
+    name = 'InitialSetup1635981526022';
 
-  public async up(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.query(`CREATE TABLE typeorm_metadata (
+    public async up(queryRunner: QueryRunner): Promise<void> {
+        await queryRunner.query(`CREATE TABLE typeorm_metadata (
                 "type" varchar(255) NOT NULL,
                 "database" varchar(255) DEFAULT NULL,
                 "schema" varchar(255) DEFAULT NULL,
@@ -12,11 +12,11 @@ export class InitialSetup1635981526022 implements MigrationInterface {
                 "name" varchar(255) DEFAULT NULL,
                 "value" text
             )`);
-    await queryRunner.query(
-      `CREATE TABLE "manufacturer" ("id" SERIAL NOT NULL, "create_at" TIMESTAMP NOT NULL DEFAULT now(), "updated_at" TIMESTAMP NOT NULL DEFAULT now(), "name" character varying NOT NULL, CONSTRAINT "PK_81fc5abca8ed2f6edc79b375eeb" PRIMARY KEY ("id"))`
-    );
-    await queryRunner.query(
-      `
+        await queryRunner.query(
+            `CREATE TABLE "manufacturer" ("id" SERIAL NOT NULL, "create_at" TIMESTAMP NOT NULL DEFAULT now(), "updated_at" TIMESTAMP NOT NULL DEFAULT now(), "name" character varying NOT NULL, CONSTRAINT "PK_81fc5abca8ed2f6edc79b375eeb" PRIMARY KEY ("id"))`
+        );
+        await queryRunner.query(
+            `
             INSERT INTO "manufacturer" (id, name) VALUES 
             (1, '3D Aesthetics'),
             (2, 'Aesthetic Bureau'),
@@ -49,12 +49,12 @@ export class InitialSetup1635981526022 implements MigrationInterface {
             (29, 'Venus Concept'),
             (30, 'Zimmer');
             `
-    );
-  }
+        );
+    }
 
-  public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.query(
-      `
+    public async down(queryRunner: QueryRunner): Promise<void> {
+        await queryRunner.query(
+            `
             DELETE FROM "manufacturer" WHERE name in 
             (
                 '3D Aesthetics',
@@ -89,8 +89,8 @@ export class InitialSetup1635981526022 implements MigrationInterface {
                 'Zimmer'
             );
             `
-    );
-    await queryRunner.query(`DROP TABLE "manufacturer"`);
-    await queryRunner.query(`DROP TABLE typeorm_metadata`);
-  }
+        );
+        await queryRunner.query(`DROP TABLE "manufacturer"`);
+        await queryRunner.query(`DROP TABLE typeorm_metadata`);
+    }
 }

@@ -1,2 +1,2 @@
 // Entities
-export * from "./entity/Manufacturer";
+export * from './entity/Manufacturer';

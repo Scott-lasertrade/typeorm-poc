@@ -1,5 +1,7 @@
 {
-  "name": "typeorm-attempt",
-  "region": "us-east-1",
-  "main": "stacks/index.ts"
+    "name": "typeorm-attempt",
+    "region": "ap-southeast-1",
+    "lint": true,
+    "typeCheck": true,
+    "main": "stacks/index.ts"
 }

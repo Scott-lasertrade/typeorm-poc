@@ -1,33 +1,34 @@
 {
-  "name": "typeorm-attempt",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "test": "sst test",
-    "start": "sst start",
-    "build": "sst build",
-    "deploy": "sst deploy",
-    "remove": "sst remove",
-    "typeorm": "typeorm-ts-node-commonjs -d ./src/common/Database.ts",
-    "migration:generate": "npm run typeorm migration:generate"
-  },
-  "eslintConfig": {
-    "extends": [
-      "serverless-stack"
-    ]
-  },
-  "devDependencies": {
-    "@tsconfig/node14": "^1.0.1",
-    "@types/aws-lambda": "^8.10.70",
-    "@types/node": "<15.0.0",
-    "typescript": "4.4.4",
-    "@serverless-stack/cli": "0.69.7",
-    "@serverless-stack/resources": "0.69.7",
-    "aws-cdk-lib": "2.15.0",
-    "pg": "8.7.1",
-    "reflect-metadata": "^0.1.13",
-    "typeorm": "0.3.6",
-    "typeorm-aurora-data-api-driver": "2.4.2"
-  },
-  "dependencies": {}
+    "name": "typeorm-attempt",
+    "version": "0.1.0",
+    "private": true,
+    "type": "commonjs",
+    "scripts": {
+        "test": "sst test",
+        "start": "sst start",
+        "build": "sst build",
+        "deploy": "sst deploy",
+        "remove": "sst remove",
+        "typeorm": "typeorm-ts-node-commonjs -d ./src/common/Database.ts",
+        "migration:generate": "npm run typeorm migration:generate"
+    },
+    "eslintConfig": {
+        "extends": [
+            "serverless-stack"
+        ]
+    },
+    "devDependencies": {
+        "@tsconfig/node14": "^1.0.1",
+        "@types/aws-lambda": "^8.10.70",
+        "@types/node": "<15.0.0",
+        "typescript": "4.4.4",
+        "@serverless-stack/cli": "0.69.7",
+        "@serverless-stack/resources": "0.69.7",
+        "aws-cdk-lib": "2.15.0",
+        "pg": "8.7.1",
+        "reflect-metadata": "^0.1.13",
+        "typeorm": "0.3.6",
+        "typeorm-aurora-data-api-driver": "2.4.2"
+    },
+    "dependencies": {}
 }
